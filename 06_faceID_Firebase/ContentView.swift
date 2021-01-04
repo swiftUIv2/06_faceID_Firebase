@@ -1,21 +1,30 @@
 import SwiftUI
 import LocalAuthentication
 
+
+
+//////////////////////////////  https://console.firebase.google.com/u/0/project/faceidfire/authentication/users ///////////////////////
+
 struct ContentView: View {
     @AppStorage("status") var logged = false
     var body: some View {
         NavigationView {
-//            if logged {
-//             Text("User logged in...")
-//                .navigationTitle("Home")
-//                .navigationBarHidden(false)
-////                .preferredColorScheme(.light)
-//                .padding(.top, 8)
-//            }else {
+            
+            
+            if logged {
+                
+             Home()
+                .navigationTitle("Home")
+                .navigationBarHidden(false)
+//                .preferredColorScheme(.light)
+                .padding(.top, 8)
+            }else {
                 Login()
 //                    .preferredColorScheme(.dark)
-                    .navigationBarHidden(false)
-//            }
+                    .navigationBarHidden(true)
+            }
+            
+            
             
         }
     }
